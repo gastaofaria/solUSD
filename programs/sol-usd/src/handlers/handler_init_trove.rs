@@ -20,8 +20,9 @@ pub fn process(ctx: Context<InitTrove>, collateral: u64, debt: u64) -> Result <(
     let trove_manager = &mut ctx.accounts.trove_manager_account;
     let trove = &mut ctx.accounts.trove_account;
 
-    trove.collateral += collateral;
-    trove.debt += debt;
+    trove.collateral = collateral;
+    trove.debt = debt;
+    trove.owner = ctx.accounts.signer.key();
 
     trove_manager.total_collateral += collateral;
     trove_manager.total_debt += debt;
