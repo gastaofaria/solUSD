@@ -1,6 +1,7 @@
 use anchor_lang::prelude::*;
 use handlers::*;
 
+mod error;
 mod handlers;
 mod state;
 
@@ -18,7 +19,7 @@ pub mod sol_usd {
         handler_init_trove::process(ctx, collateral, debt)
     }
 
-    pub fn withdraw_collateral(ctx: Context<WithdrawCollateral>, collateral: u64) -> Result<()> {
-        handler_withdraw_collateral::process(ctx, collateral)
+    pub fn withdraw(ctx: Context<Withdraw>, amount: u64) -> Result<()> {
+        handler_withdraw::process(ctx, amount)
     }
 }
