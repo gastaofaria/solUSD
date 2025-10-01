@@ -38,5 +38,4 @@ pub struct InitTrove<'info> {
     // pub trove_token_account: InterfaceAccount<'info, TokenAccount>,
     // pub token_program: Interface<'info, TokenInterface>, 
     pub system_program: Program <'info, System>,
-
 }

@@ -12,6 +12,7 @@ pub struct Trove {
 #[account]
 #[derive(InitSpace)]
 pub struct TroveManager {
+    pub owner: Pubkey,
     pub mint_address: Pubkey,
 
     pub total_collateral: u64,

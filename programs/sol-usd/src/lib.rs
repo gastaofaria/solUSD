@@ -10,9 +10,9 @@ declare_id!("2m9aAjnY5x8QjK3r6vebqgUihbVYDgxRLRvtmEwn7WcV");
 pub mod sol_usd {
     use super::*;
 
-    // pub fn init_trove_manager(ctx: Context<InitTroveManager>) -> Result<()> {
-    //     initialize::process(ctx)
-    // }
+    pub fn init_trove_manager(ctx: Context<InitTroveManager>) -> Result<()> {
+        handler_init_trove_manager::process(ctx)
+    }
 
     pub fn init_trove(ctx: Context<InitTrove>, collateral: u64, debt: u64) -> Result<()> {
         handler_init_trove::process(ctx, collateral, debt)

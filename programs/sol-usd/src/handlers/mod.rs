@@ -1,3 +1,6 @@
+pub use handler_init_trove_manager::*;
+pub mod handler_init_trove_manager;
+
 pub use handler_init_trove::*;
 pub mod handler_init_trove;
 
